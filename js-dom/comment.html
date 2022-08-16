@@ -19,9 +19,16 @@
         <button id="submit-comment">post</button>
     </div>
     <script>
+        // 1. get button event handler
         document.getElementById("submit-comment").addEventListener('click',function(){
+            
+            // 2. get user comment
             const commentText = document.getElementById('comment-text');
-            console.log(commentText.value);
+            const userComment=commentText.value;
+
+            // 3.creat comment peragraph        
+            const p = document.getElementById('p');
+            p.innerText = commentText.value;
         })
     </script>
 </body>
