@@ -12,8 +12,17 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit natus consequatur dolore, nostrum qui vel nemo error animi accusantium consectetur voluptates ipsam, quibusdam sit temporibus minima a illo dicta rerum!</p>
         <p>Pariatur tempora iure sequi corporis itaque quis molestiae nulla, repudiandae repellat nostrum animi iusto dolor, maxime harum ex dicta eos dolores exercitationem, dignissimos id ut? Cumque illum aliquam sint reprehenderit.</p>
         <p>Amet dicta pariatur dolores expedita corporis, assumenda recusandae cumque ab ipsam modi debitis vitae nostrum a harum ratione itaque ea quaerat temporibus natus autem! Aut officiis totam atque aliquam illum.</p>
-
     </div>
-    
+    <div>
+        <textarea name="" id="comment-text" cols="60" rows="10"></textarea>
+        <br>
+        <button id="submit-comment">post</button>
+    </div>
+    <script>
+        document.getElementById("submit-comment").addEventListener('click',function(){
+            const commentText = document.getElementById('comment-text');
+            console.log(commentText.value);
+        })
+    </script>
 </body>
 </html>
