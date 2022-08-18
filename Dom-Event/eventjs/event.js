@@ -30,3 +30,13 @@ makeGoldenRod.addEventListener('click',makegoldenRod );
 function makegoldenRod(){
     document.body.style.backgroundColor='goldenrod';
 }
+
+
+// 6th types onclick
+
+const makeHotPink =document.getElementById('make-hotpink');
+makeHotPink.addEventListener('click',function(){
+
+  document.body.style.backgroundColor='hotpink'
+  
+})
