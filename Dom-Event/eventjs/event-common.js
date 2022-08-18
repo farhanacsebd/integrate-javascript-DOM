@@ -6,3 +6,10 @@ function handleJustFanctionClick(){
 }
 
 // direct function 
+
+document.getElementById('handle-evnt').addEventListener('click',function(){
+
+    const p = document.getElementById('clicking-method');
+    p.innerText = 'set by direct add event listener'
+
+   })
