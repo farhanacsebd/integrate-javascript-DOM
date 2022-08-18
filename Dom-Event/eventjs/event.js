@@ -40,3 +40,13 @@ makeHotPink.addEventListener('click',function(){
   document.body.style.backgroundColor='hotpink'
   
 })
+
+
+
+// 7th types onclick 
+
+document.getElementById('make-lightBlue').addEventListener('click',function(){
+
+    document.body.style.backgroundColor = 'lightblue';
+
+})
