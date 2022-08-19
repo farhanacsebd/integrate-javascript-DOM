@@ -13,41 +13,6 @@
         <input  id="delete-confirm" type="text" placeholder="please type delete">
         <button id="delete-btn" disabled>Delete</button>
     </section>
-    <script>
-        document.getElementById('delete-btn').addEventListener('click',function(){
-            document.getElementById('secret-info').style.display='none';
-        });
-        
-        //focus
-        document.getElementById('delete-confirm').addEventListener('focus',function(){
-           document.body.style.backgroundColor =' lightcoral'
-        });
-
-        // blur
-        document.getElementById('delete-confirm').addEventListener('blur',function(){
-           document.body.style.backgroundColor ='white'
-        });
-
-       /*  // keydown
-        document.getElementById('delete-confirm').addEventListener('keydown',function(){
-           const deleteField = document.getElementById('delete-confirm');
-           console.log(deleteField.value);
-        }); */
-       /*  // keypress
-        document.getElementById('delete-confirm').addEventListener('keypress',function(){
-           const deleteField = document.getElementById('delete-confirm');
-           console.log(deleteField.value);
-        }); */
-        // keyup
-        document.getElementById('delete-confirm').addEventListener('keyup',function(){
-           const deleteField = document.getElementById('delete-confirm');
-           console.log(deleteField.value);
-        });
-        // change
-        document.getElementById('delete-confirm').addEventListener('change',function(){
-           const deleteField = document.getElementById('delete-confirm');
-           console.log(deleteField.value);
-        });
-    </script>
+    <script src="eventjs/more-events.js"></script>
 </body>
 </html>
