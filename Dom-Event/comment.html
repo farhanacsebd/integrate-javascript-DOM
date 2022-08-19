@@ -16,22 +16,6 @@
         <textarea name="" id="name-post" cols="60" rows="4"></textarea> <br>
         <button id="name-field">post</button>
     </div>
-    <!-- <script src="eventjs/comment.js"></script> -->
-    <script>
-       document.getElementById('name-field').addEventListener('click',function(){
-        
-        const namePost = document.getElementById('name-post');
-        // console.log(namePost.value);
-        // const userName = namePost.value;
-
-        const newComment = document.createElement('p');
-        newComment.innerText = namePost.value;
-
-        const commentContainer = document.getElementById('comment-container');
-        commentContainer.appendChild(newComment)
-
-        namePost.value =''; 
-       })
-    </script>   
+    <script src="eventjs/comment.js"></script>     
 </body>
 </html>
