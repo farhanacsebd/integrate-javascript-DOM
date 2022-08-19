@@ -27,6 +27,17 @@
         document.getElementById('delete-confirm').addEventListener('blur',function(){
            document.body.style.backgroundColor ='white'
         });
+
+       /*  // keydown
+        document.getElementById('delete-confirm').addEventListener('keydown',function(){
+           const deleteField = document.getElementById('delete-confirm');
+           console.log(deleteField.value);
+        }); */
+        // keypress
+        document.getElementById('delete-confirm').addEventListener('keypress',function(){
+           const deleteField = document.getElementById('delete-confirm');
+           console.log(deleteField.value);
+        });
     </script>
 </body>
 </html>
