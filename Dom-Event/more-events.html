@@ -10,13 +10,16 @@
     <h2>More Events</h2>
     <section>
         <h3 id="secret-info">this is delete button!!!</h3>
-        <input type="text" placeholder="please type delete">
+        <input  id="delete-confirm" type="text" placeholder="please type delete">
         <button id="delete-btn" disabled>Delete</button>
     </section>
     <script>
         document.getElementById('delete-btn').addEventListener('click',function(){
             document.getElementById('secret-info').style.display='none';
-        })
+        });
+        document.getElementById('delete-confirm').addEventListener('focus',function(){
+            console.log('focus');
+        });
     </script>
 </body>
 </html>
