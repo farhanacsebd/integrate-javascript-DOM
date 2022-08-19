@@ -8,5 +8,30 @@
 </head>
 <body>
     <h2>Add your comment,Please!!!</h2>
+    <div id="comment-container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum eum ipsa fuga voluptatem odit? Vitae voluptates eaque dicta temporibus ducimus eveniet quod nostrum, officia voluptate ab pariatur quasi ipsam ad?</p>
+        <p>Fugit odio deserunt dolorem neque ullam! Ut reiciendis, libero reprehenderit placeat molestiae nihil, et ducimus necessitatibus, voluptatum aliquid labore delectus commodi cumque eum quos odio dignissimos debitis! Velit, quisquam laborum.</p>
+    </div>
+    <div>
+        <textarea name="" id="name-post" cols="60" rows="4"></textarea> <br>
+        <button id="name-field">post</button>
+    </div>
+    <!-- <script src="eventjs/comment.js"></script> -->
+    <script>
+       document.getElementById('name-field').addEventListener('click',function(){
+        
+        const namePost = document.getElementById('name-post');
+        // console.log(namePost.value);
+        // const userName = namePost.value;
+
+        const newComment = document.createElement('p');
+        newComment.innerText = namePost.value;
+
+        const commentContainer = document.getElementById('comment-container');
+        commentContainer.appendChild(newComment)
+
+        namePost.value =''; 
+       })
+    </script>   
 </body>
 </html>
