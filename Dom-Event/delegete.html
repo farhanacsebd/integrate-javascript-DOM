@@ -19,7 +19,9 @@
     <script>
         const items = document.getElementsByClassName('item');
         for(item of items){
-            console.log(item);
+                item.addEventListener('click',function(){
+                    console.log('remove item');
+                })
         }
     </script>
 </body>
