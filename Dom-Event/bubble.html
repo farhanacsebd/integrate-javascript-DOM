@@ -10,14 +10,22 @@
     <h2>Event bubble</h2>
     <section id="section-container">
         <h4>Event bubble list</h4>
-        <ul>
+        <ul id="list-container">
             <li>Lorem, ipsum.</li>
-            <li>Reiciendis, totam?</li>
+            <li id="list-item">Reiciendis, totam?</li>
             <li>Natus, unde.</li>
             <li>Velit, blanditiis?</li>
             <li>Quisquam, culpa.</li>
             <li>Aliquid, cum!</li>
         </ul>
     </section>
+    <script>
+        document.getElementById('list-item').addEventListener('click',function(){
+            console.log('list item');
+        })
+        document.getElementById('list-container').addEventListener('click',function(){
+            console.log('list-container item');
+        })
+    </script>
 </body>
 </html>
