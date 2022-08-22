@@ -32,6 +32,10 @@
             const parent = document.getElementById('item-container');
             parent.appendChild(li)
         })
+
+        document.getElementById('item-container').addEventListener('click',function(event){
+           event.target.parentNode.removeChild(event.target);
+        })
     </script>
 </body>
 </html>
