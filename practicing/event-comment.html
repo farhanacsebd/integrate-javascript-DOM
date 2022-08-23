@@ -7,9 +7,16 @@
     <title>event-comment</title>
 </head>
 <body>
+    <p id="clicking-method"></p>
     <input type="text">
     <button>update</button>
-    <button>Click Me</button>
+    <button onclick="handleJustClick()">Click Me</button>
     <button>Click Me2</button>
+    <script>
+        function handleJustClick(){
+            const clickingMethod = document.getElementById('clicking-method');
+            clickingMethod.innerText ='set the value'
+        }
+    </script>
 </body>
 </html>
