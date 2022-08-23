@@ -12,24 +12,6 @@
     <button id="name-update">update</button>
     <button onclick="handleJustClick()">Click Me</button>
     <button id="handle-event">Click Me2</button>
-    <script>
-        function handleJustClick(){
-            const clickingMethod = document.getElementById('clicking-method');
-            clickingMethod.innerText ='set the value'
-        }
-
-        document.getElementById('handle-event').addEventListener('click',function(){
-            const clickingMethod = document.getElementById('clicking-method');
-            clickingMethod.innerText = 'set by direct addeventlistener';
-        });
-
-        document.getElementById('name-update').addEventListener('click',function(){
-            const clicking = document.getElementById('name-field');
-        
-            const clickingMethod = document.getElementById('clicking-method');
-            clickingMethod.innerText = clicking.value;
-            clicking.value ='';
-        })
-    </script>
+    <script src="javascript-dom/event.comment.js"></script>
 </body>
 </html>
