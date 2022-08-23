@@ -11,12 +11,17 @@
     <input type="text">
     <button>update</button>
     <button onclick="handleJustClick()">Click Me</button>
-    <button>Click Me2</button>
+    <button id="handle-event">Click Me2</button>
     <script>
         function handleJustClick(){
             const clickingMethod = document.getElementById('clicking-method');
             clickingMethod.innerText ='set the value'
         }
+
+        document.getElementById('handle-event').addEventListener('click',function(){
+            const clickingMethod = document.getElementById('clicking-method');
+            clickingMethod.innerText = 'set by direct addeventlistener';
+        })
     </script>
 </body>
 </html>
