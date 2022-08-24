@@ -8,14 +8,14 @@
 </head>
 <body>
     <h2>Comment In here</h2>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quia iure velit, id eaque quo similique dolor fugit quidem consectetur rem ipsum delectus quos deleniti facere obcaecati blanditiis rerum ut.</p>
+    <div id="comment-Container">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quia iure velit, id eaque quo similique dolor fugit quidem consectetur rem ipsum delectus quos deleniti facere obcaecati blanditiis rerum ut.</p>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque beatae quis repellendus, nisi odio reiciendis eos corrupti? Magnam reprehenderit eveniet dolores, dolorum debitis dicta nobis, eum, illo repellendus sit magni?</p>
-    <textarea name="" id="comment-box" cols="60" rows="8"></textarea><br>
+    </div>
+    <div>
+        <textarea name="" id="comment-box" cols="60" rows="8"></textarea><br>
     <button id="handle-button">post</button>
-    <script>
-        document.getElementById('handle-button').addEventListener('click',function(){
-            console.log('post in here');
-        })
-    </script>
+    </div>
+    <script src="javascript-dom/comment.html"></script>
 </body>
 </html>
