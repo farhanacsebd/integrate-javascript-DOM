@@ -15,8 +15,12 @@
     <script>
         function handleJustClick(){
             const justClick =document.getElementById('clicking-method');
-            justClick.value = 'set the values';
-        }
+            justClick.innerText = 'set the values';
+        };
+       document.getElementById('handle-event').addEventListener('click',function(){
+        const handleEven = document.getElementById('clicking-method');
+            handleEven.innerText = 'the the value using direct method'
+       })
     </script>
     <!-- <script src="javascript-dom/event.comment.js"></script> -->
 </body>
