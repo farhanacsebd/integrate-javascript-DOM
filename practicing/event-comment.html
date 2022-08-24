@@ -12,6 +12,12 @@
     <button id="name-update">update</button>
     <button onclick="handleJustClick()">Click Me</button>
     <button id="handle-event">Click Me2</button>
-    <script src="javascript-dom/event.comment.js"></script>
+    <script>
+        function handleJustClick(){
+            const justClick =document.getElementById('clicking-method');
+            justClick.value = 'set the values';
+        }
+    </script>
+    <!-- <script src="javascript-dom/event.comment.js"></script> -->
 </body>
 </html>
