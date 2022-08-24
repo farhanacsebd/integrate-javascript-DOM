@@ -16,19 +16,6 @@
         <textarea name="" id="comment-box" cols="60" rows="8"></textarea><br>
     <button id="handle-button">post</button>
     </div>
-    <script>
-        document.getElementById('handle-button').addEventListener('click',function(){
-
-            const commentBox =document.getElementById('comment-box');
-            // console.log(commentBox.value);
-
-            const newPost = document.createElement('p');
-            newPost.innerText = commentBox.value;
-
-            const commentContainer = document.getElementById('comment-Container');
-            commentContainer.appendChild(newPost)
-        })
-    </script>
     <script src="javascript-dom/comment.html"></script>
 </body>
 </html>
