@@ -21,6 +21,14 @@
         const handleEven = document.getElementById('clicking-method');
             handleEven.innerText = 'the the value using direct method'
        })
+
+       document.getElementById('name-update').addEventListener('click',function(){
+        const updateButton = document.getElementById('name-field');
+        console.log(updateButton.value);
+
+        const p = document.getElementById('clicking-method');
+        p.innerText = updateButton.value ;
+       })
     </script>
     <!-- <script src="javascript-dom/event.comment.js"></script> -->
 </body>
