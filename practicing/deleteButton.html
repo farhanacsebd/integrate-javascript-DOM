@@ -26,6 +26,11 @@
         document.getElementById('delete-confirm').addEventListener('blur',function(){
             document.body.style.backgroundColor = 'white'
         });
+        // keyup
+        document.getElementById('delete-confirm').addEventListener('keyup',function(){
+            const field = document.getElementById('delete-confirm');
+            console.log(field.value);
+        });
     </script>
 </body>
 </html>
