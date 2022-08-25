@@ -1,7 +1,9 @@
 // 2nd types onclick
 
 function makeRed(){
+  
     document.body.style.backgroundColor='red';
+
 }
 
 
@@ -9,14 +11,18 @@ function makeRed(){
 
 const blueButton = document.getElementById('make-blue');
 blueButton.onclick = makeBlue;
+
 function makeBlue(){
- document.body.style.backgroundColor='blue';
+ 
+    document.body.style.backgroundColor='blue';
+
 }
 
 // 4th types onclick
 
 const makeGreen = document.getElementById('make-green');
 makeGreen.onclick =  function (){
+
     document.body.style.backgroundColor='green';
     
 }
@@ -28,7 +34,9 @@ const makeGoldenRod = document.getElementById('make-goldenRod');
 makeGoldenRod.addEventListener('click',makegoldenRod );
 
 function makegoldenRod(){
+
     document.body.style.backgroundColor='goldenrod';
+    
 }
 
 

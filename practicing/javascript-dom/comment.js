@@ -4,6 +4,7 @@ document.getElementById('handle-button').addEventListener('click',function(){
    
 
    const createPost = document.createElement('p');
+   
    createPost.innerText = commentBox.value;
 
 
