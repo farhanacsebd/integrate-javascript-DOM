@@ -9,7 +9,13 @@
 <body>
     <h3>More Event</h3>
     <section>
-        <h4>There is only delete options</h4>
+        <h4 id="secret-info">There is only delete options</h4>
+        <button id="delete-btn">Delete</button>
     </section>
+    <script>
+        document.getElementById('delete-btn').addEventListener('click',function(){
+            document.getElementById('secret-info').style.display = 'none';
+        })
+    </script>
 </body>
 </html>
