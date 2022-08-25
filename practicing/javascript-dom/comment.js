@@ -10,7 +10,5 @@ document.getElementById('handle-button').addEventListener('click',function(){
 
    const commentContainer = document.getElementById('comment-Container');
    
-   createPost.innerText = commentBox.value;
-   
    commentContainer.appendChild(createPost);
 })
