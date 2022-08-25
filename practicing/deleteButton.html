@@ -10,12 +10,18 @@
     <h3>More Event</h3>
     <section>
         <h4 id="secret-info">There is only delete options</h4>
-        <button id="delete-btn">Delete</button>
+        <input id="delete-confirm" type="text" placeholder="type delete">
+        <button id="delete-btn" disabled>Delete</button>
     </section>
     <script>
         document.getElementById('delete-btn').addEventListener('click',function(){
             document.getElementById('secret-info').style.display = 'none';
-        })
+        });
+
+        // focus
+        document.getElementById('delete-confirm').addEventListener('focus',function(){
+            document.body.style.backgroundColor = 'lightcoral'
+        });
     </script>
 </body>
 </html>
