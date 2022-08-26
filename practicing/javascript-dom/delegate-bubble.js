@@ -1,4 +1,4 @@
-document.getElementById("item-btn").addEventListener('click',function(event){
+document.getElementById("item-btn").addEventListener('click',function(){
     
     const li = document.createElement('li');
     
@@ -6,7 +6,7 @@ document.getElementById("item-btn").addEventListener('click',function(event){
     
     document.getElementById("item-container").appendChild(li);
     
-    event.target.parentNode;
+    
 
 })
 document.getElementById("item-container").addEventListener('click',function(event){
