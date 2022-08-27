@@ -15,7 +15,7 @@ document.getElementById('login-submit').addEventListener('click',function(){
 
 
     if((userEmail == "abc@mail.com") && (userPassword == "secret")){
-        console.log('valid user');
+        window.location.href ='banking.html'
     }
 
 })
