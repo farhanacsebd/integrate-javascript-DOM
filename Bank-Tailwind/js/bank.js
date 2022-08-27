@@ -13,4 +13,9 @@ document.getElementById('login-submit').addEventListener('click',function(){
     const passwordField = document.getElementById('user-password');
     const userPassword = passwordField.value;
 
+
+    if((userEmail == "abc@mail.com") && (userPassword == "secret")){
+        console.log('valid user');
+    }
+
 })
