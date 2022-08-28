@@ -21,7 +21,12 @@ document.getElementById('deposite-button').addEventListener('click',function(){
 
 
 //  update account balance 
-
+    
+    const balanceTotal = document.getElementById('balance-total');
+    const previousBalanceText = balanceTotal.innerText;
+    const previousBalanceAmount =parseFloat(previousBalanceText);
+    const newBalanceTotal = previousBalanceAmount + newDipositeAmount;
+    balanceTotal.innerText = newBalanceTotal;
 
 // clear the diposite input field 
   dipositeInput.value= '';
