@@ -30,4 +30,12 @@ document.getElementById('deposite-button').addEventListener('click',function(){
 
 // clear the diposite input field 
   dipositeInput.value= '';
+});
+
+
+
+// handle withdraw event handler 
+
+document.getElementById('withdraw-button').addEventListener('click',function(){
+    console.log('hello');
 })
