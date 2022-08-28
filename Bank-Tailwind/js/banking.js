@@ -1,7 +1,7 @@
 // handle diposite button event 
 document.getElementById('deposite-button').addEventListener('click',function(){
     
-    // get the amount diposite 
+    // get the amount diposited 
     const dipositeInput = document.getElementById('deposite-input');
     const dipositeAmount = dipositeInput.value;
     
@@ -10,6 +10,6 @@ document.getElementById('deposite-button').addEventListener('click',function(){
   const dipositeTotal = document.getElementById('deposite-total');
   dipositeTotal.innerText = dipositeAmount;
 
-
+// clear the diposite input field 
   dipositeInput.value= '';
 })
