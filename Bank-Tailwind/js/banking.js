@@ -44,5 +44,14 @@ document.getElementById('withdraw-button').addEventListener('click',function(){
 
 // set withdraw total 
 
-   
+    const withdrawTotal =document.getElementById('withdraw-total');
+    const previousWithdrawText = withdrawTotal.innerText;
+    const previousWithdrawAmount = parseFloat(previousWithdrawText);
+    const newWithdrawTotal = previousWithdrawAmount + newWithdrawAmount;
+
+    withdrawTotal.innerText = newWithdrawTotal;
+
+// clear the withdraw input field 
+
+    withdrawInput.value = '';
 })
