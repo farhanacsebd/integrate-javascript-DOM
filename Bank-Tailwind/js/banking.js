@@ -51,6 +51,15 @@ document.getElementById('withdraw-button').addEventListener('click',function(){
 
     withdrawTotal.innerText = newWithdrawTotal;
 
+
+ // update balance total
+
+ const balanceTotal = document.getElementById('balance-total');
+ const previousBalanceText = balanceTotal.innerText;
+ const previousBalanceTotal =parseFloat(previousBalanceText);
+ const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
+ balanceTotal.innerText = newBalanceTotal;
+
 // clear the withdraw input field 
 
     withdrawInput.value = '';
