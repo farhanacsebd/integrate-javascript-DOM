@@ -8,7 +8,8 @@ document.getElementById('deposite-button').addEventListener('click',function(){
     const newDipositetext = dipositeInput.value;
     const newDipositeAmount = parseFloat(newDipositetext);
 
-  
+//  update diposite total 
+
     const dipositeTotal = document.getElementById('deposite-total');
   
   const previousDipositeText = dipositeTotal.innerText;
