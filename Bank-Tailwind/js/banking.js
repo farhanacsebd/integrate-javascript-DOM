@@ -42,4 +42,7 @@ document.getElementById('withdraw-button').addEventListener('click',function(){
     const newWithdrawText = withdrawInput.value;
     const newWithdrawAmount = parseFloat(newWithdrawText);
 
+// set withdraw total 
+
+   
 })
