@@ -37,5 +37,9 @@ document.getElementById('deposite-button').addEventListener('click',function(){
 // handle withdraw event handler 
 
 document.getElementById('withdraw-button').addEventListener('click',function(){
-    console.log('hello');
+    
+    const withdrawInput = document.getElementById('withdraw-input');
+    const newWithdrawText = withdrawInput.value;
+    const newWithdrawAmount = parseFloat(newWithdrawText);
+
 })
