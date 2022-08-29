@@ -34,8 +34,16 @@ dipositeInput.value = '';
 
 document.getElementById('withdraw-button').addEventListener('click',function(){
     
-    const dipositeTotal = document.getElementById('withdraw-input');
-    const dipositeAmount = parseFloat(dipositeTotal.value);
-    console.log(dipositeAmount);
+    const withdrawInput = document.getElementById('withdraw-input');
+    const dipositeAmount = parseFloat(withdrawInput.value);
+    
+    const withdrawTotal = document.getElementById('withdraw-total');
+    const previousWithdrawAmount = parseFloat(withdrawTotal.innerText);
+    const TotalWithdrawAmount = previousWithdrawAmount + dipositeAmount;
+    withdrawTotal.innerText = TotalWithdrawAmount;
 
+
+    // clear input field
+
+    withdrawTotal.innerText ='';
 })
