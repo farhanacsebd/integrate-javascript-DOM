@@ -14,9 +14,9 @@ document.getElementById('deposite-button').addEventListener('click',function(){
   
   const previousDipositeText = dipositeTotal.innerText;
   const previousDipositeAmount = parseFloat(previousDipositeText);
-  const newDipositeTotal = previousDipositeAmount + newDipositeAmount;
+  dipositeTotal.innerText = previousDipositeAmount + newDipositeAmount;
   
-  dipositeTotal.innerText = newDipositeTotal;
+ 
 
 
 
