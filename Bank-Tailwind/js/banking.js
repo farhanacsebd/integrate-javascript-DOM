@@ -25,8 +25,8 @@ document.getElementById('deposite-button').addEventListener('click',function(){
     const balanceTotal = document.getElementById('balance-total');
     const previousBalanceText = balanceTotal.innerText;
     const previousBalanceAmount =parseFloat(previousBalanceText);
-    const newBalanceTotal = previousBalanceAmount + newDipositeAmount;
-    balanceTotal.innerText = newBalanceTotal;
+    balanceTotal.innerText = previousBalanceAmount + newDipositeAmount;
+    
 
 // clear the diposite input field 
   dipositeInput.value= '';
