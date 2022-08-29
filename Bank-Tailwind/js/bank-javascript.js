@@ -35,15 +35,24 @@ dipositeInput.value = '';
 document.getElementById('withdraw-button').addEventListener('click',function(){
     
     const withdrawInput = document.getElementById('withdraw-input');
-    const dipositeAmount = parseFloat(withdrawInput.value);
+    const newWithdrawAmount = parseFloat(withdrawInput.value);
     
     const withdrawTotal = document.getElementById('withdraw-total');
     const previousWithdrawAmount = parseFloat(withdrawTotal.innerText);
-    const TotalWithdrawAmount = previousWithdrawAmount + dipositeAmount;
+    const TotalWithdrawAmount = previousWithdrawAmount + newWithdrawAmount;
     withdrawTotal.innerText = TotalWithdrawAmount;
 
+  
+    // set balance total 
+
+    const balanceTotal = document.getElementById('balance-total');
+    const balanceTotalAmount = parseFloat(balanceTotal.innerText);
+    const totalBalanceAmount = balanceTotalAmount - newWithdrawAmount;
+    
+    balanceTotal.innerText = totalBalanceAmount;
+    
 
     // clear input field
 
-    withdrawTotal.innerText ='';
+    withdrawInput.value ='';
 })
