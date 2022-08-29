@@ -30,6 +30,8 @@ document.getElementById('deposite-button').addEventListener('click',function(){
 
 // clear the diposite input field 
   dipositeInput.value= '';
+
+  
 });
 
 
@@ -63,4 +65,5 @@ document.getElementById('withdraw-button').addEventListener('click',function(){
 // clear the withdraw input field 
 
     withdrawInput.value = '';
+    
 })
