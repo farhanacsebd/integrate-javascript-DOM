@@ -27,4 +27,15 @@ balanceTotal.innerText = totalBalanceAmount;
 dipositeInput.value = '';
 
 
+});
+
+
+//  withdraw filed 
+
+document.getElementById('withdraw-button').addEventListener('click',function(){
+    
+    const dipositeTotal = document.getElementById('withdraw-input');
+    const dipositeAmount = parseFloat(dipositeTotal.value);
+    console.log(dipositeAmount);
+
 })
