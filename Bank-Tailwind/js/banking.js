@@ -1,3 +1,6 @@
+//using function
+
+
 // handle diposite button event 
 
 document.getElementById('deposite-button').addEventListener('click',function(){
@@ -65,5 +68,5 @@ document.getElementById('withdraw-button').addEventListener('click',function(){
 // clear the withdraw input field 
 
     withdrawInput.value = '';
-    
+
 })
