@@ -1,5 +1,14 @@
 //using function
+function inputField(){
+    const dipositeInput = document.getElementById('deposite-input');
+    const newDipositetext = dipositeInput.value;
+    const newDipositeAmount = parseFloat(newDipositetext);
 
+    // clear the diposite input field 
+    dipositeInput.value= '';
+
+    return newDipositeAmount;
+}
 
 // handle diposite button event 
 
@@ -7,10 +16,10 @@ document.getElementById('deposite-button').addEventListener('click',function(){
     
     // get the amount diposited 
 
-    const dipositeInput = document.getElementById('deposite-input');
+    /* const dipositeInput = document.getElementById('deposite-input');
     const newDipositetext = dipositeInput.value;
-    const newDipositeAmount = parseFloat(newDipositetext);
-
+    const newDipositeAmount = parseFloat(newDipositetext); */
+    const newDipositeAmount = inputField();
 //  update diposite total 
 
     const dipositeTotal = document.getElementById('deposite-total');
@@ -29,10 +38,6 @@ document.getElementById('deposite-button').addEventListener('click',function(){
     const previousBalanceText = balanceTotal.innerText;
     const previousBalanceAmount =parseFloat(previousBalanceText);
     balanceTotal.innerText = previousBalanceAmount + newDipositeAmount;
-    
-
-// clear the diposite input field 
-  dipositeInput.value= '';
 
   
 });
