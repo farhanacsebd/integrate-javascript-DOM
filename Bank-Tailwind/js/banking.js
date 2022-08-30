@@ -25,7 +25,9 @@ function updatedTotalField(totalFieldId,amount){
 // handle the current balance 
 
 function getTheCurrentBalance(){
-    
+    const previousBalanceText = balanceTotal.innerText;
+    const previousBalanceAmount =parseFloat(previousBalanceText);
+    return previousBalanceAmount;
 }
 
 
@@ -33,8 +35,9 @@ function getTheCurrentBalance(){
 function updateBalance(amount,isAdd){
     
     const balanceTotal = document.getElementById('balance-total');
-    const previousBalanceText = balanceTotal.innerText;
-    const previousBalanceAmount =parseFloat(previousBalanceText);
+    /* const previousBalanceText = balanceTotal.innerText;
+    const previousBalanceAmount =parseFloat(previousBalanceText); */
+    const previousBalanceAmount = getTheCurrentBalance();
    if(isAdd == true){ 
    balanceTotal.innerText = previousBalanceAmount + amount;
    }
