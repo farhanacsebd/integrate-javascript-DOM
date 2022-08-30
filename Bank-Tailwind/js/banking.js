@@ -40,14 +40,20 @@ function updateBalance(amount,isAdd){
 // handle diposite button event 
 
 document.getElementById('deposite-button').addEventListener('click',function(){
-    
+    const newDipositeAmount = getInputValue('deposite-input');
+    if(newDipositeAmount > 0){
+        updatedTotalField('deposite-total',newDipositeAmount);
+    updateBalance(newDipositeAmount,true);
+    }
+
+
     // get and update the amount diposited 
 
     /* const dipositeInput = document.getElementById('deposite-input');
     const newDipositetext = dipositeInput.value;
     const newDipositeAmount = parseFloat(newDipositetext); */
    
-  const newDipositeAmount = getInputValue('deposite-input');
+  
 
 
     //  update diposite total 
@@ -58,7 +64,7 @@ document.getElementById('deposite-button').addEventListener('click',function(){
   const previousDipositeAmount = parseFloat(previousDipositeText);
   dipositeTotal.innerText = previousDipositeAmount + newDipositeAmount; */
   
-  updatedTotalField('deposite-total',newDipositeAmount)
+  
 
 
 
@@ -70,7 +76,7 @@ document.getElementById('deposite-button').addEventListener('click',function(){
     balanceTotal.innerText = previousBalanceAmount + newDipositeAmount; */
 
   
-    updateBalance(newDipositeAmount,true)
+    
 
 });
 
