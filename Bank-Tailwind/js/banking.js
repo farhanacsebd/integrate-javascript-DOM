@@ -96,10 +96,16 @@ document.getElementById('deposite-button').addEventListener('click',function(){
 
 document.getElementById('withdraw-button').addEventListener('click',function(){
     const newWithdrawAmount = getInputValue('withdraw-input');
+    const currentBalance = getTheCurrentBalance();
     if(newWithdrawAmount > 0){
       updatedTotalField('withdraw-total',newWithdrawAmount);
       updateBalance(newWithdrawAmount,false);
     }
+    if(currentBalance>0){
+        updatedTotalField('withdraw-total',newWithdrawAmount);
+      updateBalance(newWithdrawAmount,false);
+    }
+
 
 
     /* const withdrawInput = document.getElementById('withdraw-input');
