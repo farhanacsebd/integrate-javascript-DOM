@@ -1,13 +1,13 @@
 //using function
-function getInputValue(inputValue){
-    const dipositeInput = document.getElementById(inputValue);
-    const newDipositetext = dipositeInput.value;
-    const newDipositeAmount = parseFloat(newDipositetext);
+function getInputValue(inputId){
+    const inputField = document.getElementById(inputId);
+    const inputText = inputField.value;
+    const amountValue = parseFloat(inputText);
 
     // clear the diposite input field 
-    dipositeInput.value= '';
+    inputField.value= '';
 
-    return newDipositeAmount;
+    return amountValue;
 }
 
 // handle diposite button event 
@@ -48,9 +48,11 @@ document.getElementById('deposite-button').addEventListener('click',function(){
 
 document.getElementById('withdraw-button').addEventListener('click',function(){
     
-    const withdrawInput = document.getElementById('withdraw-input');
+    /* const withdrawInput = document.getElementById('withdraw-input');
     const newWithdrawText = withdrawInput.value;
-    const newWithdrawAmount = parseFloat(newWithdrawText);
+    const newWithdrawAmount = parseFloat(newWithdrawText); */
+
+    const newWithdrawAmount = getInputValue('withdraw-input');
 
 // set withdraw total 
 
@@ -72,6 +74,6 @@ document.getElementById('withdraw-button').addEventListener('click',function(){
 
 // clear the withdraw input field 
 
-    withdrawInput.value = '';
+    // withdrawInput.value = '';
 
 })
