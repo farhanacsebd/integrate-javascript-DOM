@@ -85,12 +85,18 @@ document.getElementById('deposite-button').addEventListener('click',function(){
 // handle withdraw event handler 
 
 document.getElementById('withdraw-button').addEventListener('click',function(){
-    
+    const newWithdrawAmount = getInputValue('withdraw-input');
+    if(newWithdrawAmount > 0){
+      updatedTotalField('withdraw-total',newWithdrawAmount);
+      updateBalance(newWithdrawAmount,false);
+    }
+
+
     /* const withdrawInput = document.getElementById('withdraw-input');
     const newWithdrawText = withdrawInput.value;
     const newWithdrawAmount = parseFloat(newWithdrawText); */
 
-  const newWithdrawAmount = getInputValue('withdraw-input');
+  
 
 // set withdraw total 
 
@@ -103,7 +109,7 @@ document.getElementById('withdraw-button').addEventListener('click',function(){
 
 
 
-  updatedTotalField('withdraw-total',newWithdrawAmount)
+  
 
 
  // update balance total
@@ -117,5 +123,5 @@ document.getElementById('withdraw-button').addEventListener('click',function(){
 // clear the withdraw input field 
 
     // withdrawInput.value = '';
-updateBalance(newWithdrawAmount,false)
+
 })
