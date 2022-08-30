@@ -1,6 +1,6 @@
 //using function
-function inputField(){
-    const dipositeInput = document.getElementById('deposite-input');
+function getInputValue(inputValue){
+    const dipositeInput = document.getElementById(inputValue);
     const newDipositetext = dipositeInput.value;
     const newDipositeAmount = parseFloat(newDipositetext);
 
@@ -14,12 +14,12 @@ function inputField(){
 
 document.getElementById('deposite-button').addEventListener('click',function(){
     
-    // get the amount diposited 
+    // get and update the amount diposited 
 
     /* const dipositeInput = document.getElementById('deposite-input');
     const newDipositetext = dipositeInput.value;
     const newDipositeAmount = parseFloat(newDipositetext); */
-    const newDipositeAmount = inputField();
+    const newDipositeAmount = getInputValue('deposite-input');
 //  update diposite total 
 
     const dipositeTotal = document.getElementById('deposite-total');
