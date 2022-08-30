@@ -25,6 +25,7 @@ function updatedTotalField(totalFieldId,amount){
 // handle the current balance 
 
 function getTheCurrentBalance(){
+    const balanceTotal = document.getElementById('balance-total');
     const previousBalanceText = balanceTotal.innerText;
     const previousBalanceAmount =parseFloat(previousBalanceText);
     return previousBalanceAmount;
@@ -97,14 +98,14 @@ document.getElementById('deposite-button').addEventListener('click',function(){
 document.getElementById('withdraw-button').addEventListener('click',function(){
     const newWithdrawAmount = getInputValue('withdraw-input');
     const currentBalance = getTheCurrentBalance();
-    if(newWithdrawAmount > 0){
+    if((newWithdrawAmount > 0) && (newWithdrawAmount<currentBalance)){
       updatedTotalField('withdraw-total',newWithdrawAmount);
       updateBalance(newWithdrawAmount,false);
     }
-    if(currentBalance>0){
-        updatedTotalField('withdraw-total',newWithdrawAmount);
-      updateBalance(newWithdrawAmount,false);
+    if(newWithdrawAmount>currentBalance){
+        alert("You can't do this!")
     }
+   
 
 
 
