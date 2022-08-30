@@ -22,6 +22,13 @@ function updatedTotalField(totalFieldId,amount){
 }
 
 
+// handle the current balance 
+
+function getTheCurrentBalance(){
+    
+}
+
+
 
 function updateBalance(amount,isAdd){
     
