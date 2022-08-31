@@ -12,14 +12,18 @@ function getInputField(inputValue){
 }
 
 
-function getTheAmount(totalAmount,newDipositeAmount){
-    const dipositeTotal = document.getElementById(totalAmount);
-    const previousDitositeAmount = parseFloat(dipositeTotal.innerText);
-    dipositeTotal.innerText = previousDitositeAmount + newDipositeAmount;
+function getTheAmount(totalAmount,newAmount){
+    const elementTotal = document.getElementById(totalAmount);
+    const previousAmount = parseFloat(elementTotal.innerText);
+    elementTotal.innerText = previousAmount + newAmount;
 }
 
 
-
+function getThaBalance(balanceAmount){
+    const balanceTotal = document.getElementById(balanceAmount);
+    const balanceTotalAmount = parseFloat(balanceTotal.innerText);
+    balanceTotal.innerText = balanceTotalAmount + newDipositeAmount;
+}
 
 
 document.getElementById('deposite-button').addEventListener('click',function(){
@@ -40,10 +44,10 @@ getTheAmount('deposite-total',newDipositeAmount);
 
 // Balance Increasing
 
-const balanceTotal = document.getElementById('balance-total');
+/* const balanceTotal = document.getElementById('balance-total');
 const balanceTotalAmount = parseFloat(balanceTotal.innerText);
-balanceTotal.innerText = balanceTotalAmount + newDipositeAmount;
-
+balanceTotal.innerText = balanceTotalAmount + newDipositeAmount; */
+getTheAmount('balance-total',newDipositeAmount)
 
 
 });
