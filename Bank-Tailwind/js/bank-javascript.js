@@ -1,25 +1,40 @@
+// creating the input field function
+
+function getInputField(inputValue){
+    const dipositeInput = document.getElementById(inputValue);
+    const newDipositeAmount = parseFloat(dipositeInput.value);
+    return newDipositeAmount;
+}
+
+
+
+
+
+
+
+
 document.getElementById('deposite-button').addEventListener('click',function(){
  
 // diposite input field 
 
-    const dipositeInput = document.getElementById("deposite-input");
-    const newDipositeAmount = parseFloat(dipositeInput.value);
+    /* const dipositeInput = document.getElementById("deposite-input");
+    const newDipositeAmount = parseFloat(dipositeInput.value); */
+    const newDipositeAmount = getInputField("deposite-input");
 
 // diposite value show
 
 const dipositeTotal = document.getElementById('deposite-total');
 const previousDitositeAmount = parseFloat(dipositeTotal.innerText);
-const totalDipositeAmount = previousDitositeAmount + newDipositeAmount;
-dipositeTotal.innerText = totalDipositeAmount;
+dipositeTotal.innerText = previousDitositeAmount + newDipositeAmount;
+
 
 
 // Balance Increasing
 
 const balanceTotal = document.getElementById('balance-total');
 const balanceTotalAmount = parseFloat(balanceTotal.innerText);
-const totalBalanceAmount = balanceTotalAmount + newDipositeAmount;
+balanceTotal.innerText = balanceTotalAmount + newDipositeAmount;
 
-balanceTotal.innerText = totalBalanceAmount;
 
 
 // clear value
@@ -39,17 +54,17 @@ document.getElementById('withdraw-button').addEventListener('click',function(){
     
     const withdrawTotal = document.getElementById('withdraw-total');
     const previousWithdrawAmount = parseFloat(withdrawTotal.innerText);
-    const TotalWithdrawAmount = previousWithdrawAmount + newWithdrawAmount;
-    withdrawTotal.innerText = TotalWithdrawAmount;
+    withdrawTotal.innerText = previousWithdrawAmount + newWithdrawAmount;
+
 
   
     // set balance total 
 
     const balanceTotal = document.getElementById('balance-total');
     const balanceTotalAmount = parseFloat(balanceTotal.innerText);
-    const totalBalanceAmount = balanceTotalAmount - newWithdrawAmount;
+    balanceTotal.innerText = balanceTotalAmount - newWithdrawAmount;
     
-    balanceTotal.innerText = totalBalanceAmount;
+    
     
 
     // clear input field
