@@ -19,10 +19,16 @@ function getTheAmount(totalAmount,newAmount){
 }
 
 
-function getThaBalance(balanceAmount){
+function getThaBalance(balanceAmount,newAmount,isAdd){
     const balanceTotal = document.getElementById(balanceAmount);
     const balanceTotalAmount = parseFloat(balanceTotal.innerText);
-    balanceTotal.innerText = balanceTotalAmount + newDipositeAmount;
+    
+    if(isAdd == true){
+        balanceTotal.innerText = balanceTotalAmount + newAmount;
+    }
+    else{
+        balanceTotal.innerText = balanceTotalAmount - newAmount;
+    }
 }
 
 
@@ -47,7 +53,7 @@ getTheAmount('deposite-total',newDipositeAmount);
 /* const balanceTotal = document.getElementById('balance-total');
 const balanceTotalAmount = parseFloat(balanceTotal.innerText);
 balanceTotal.innerText = balanceTotalAmount + newDipositeAmount; */
-getTheAmount('balance-total',newDipositeAmount)
+getThaBalance('balance-total',newDipositeAmount,true)
 
 
 });
@@ -72,12 +78,12 @@ document.getElementById('withdraw-button').addEventListener('click',function(){
   
     // set balance total 
 
-    const balanceTotal = document.getElementById('balance-total');
+   /*  const balanceTotal = document.getElementById('balance-total');
     const balanceTotalAmount = parseFloat(balanceTotal.innerText);
-    balanceTotal.innerText = balanceTotalAmount - newWithdrawAmount;
+    balanceTotal.innerText = balanceTotalAmount - newWithdrawAmount; */
     
     
-    
+    getThaBalance('balance-total',newWithdrawAmount,false)
 
     // clear input field
 
