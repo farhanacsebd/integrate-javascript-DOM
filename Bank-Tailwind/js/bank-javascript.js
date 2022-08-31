@@ -1,14 +1,14 @@
 // creating the input field function
 
 function getInputField(inputValue){
-    const dipositeInput = document.getElementById(inputValue);
-    const newDipositeAmount = parseFloat(dipositeInput.value);
+    const elementInput = document.getElementById(inputValue);
+    const newElementAmount = parseFloat(elementInput.value);
     
     // clear value
 
-    dipositeInput.value = '';
+    elementInput.value = '';
 
-    return newDipositeAmount;
+    return newElementAmount;
 }
 
 
@@ -58,9 +58,11 @@ document.getElementById('withdraw-button').addEventListener('click',function(){
     const newWithdrawAmount = getInputField('withdraw-input');
 
 
-    const withdrawTotal = document.getElementById('withdraw-total');
+    /* const withdrawTotal = document.getElementById('withdraw-total');
     const previousWithdrawAmount = parseFloat(withdrawTotal.innerText);
-    withdrawTotal.innerText = previousWithdrawAmount + newWithdrawAmount;
+    withdrawTotal.innerText = previousWithdrawAmount + newWithdrawAmount; */
+
+    getTheAmount('withdraw-total',newWithdrawAmount)
 
 
   
@@ -75,5 +77,5 @@ document.getElementById('withdraw-button').addEventListener('click',function(){
 
     // clear input field
 
-    withdrawInput.value ='';
+    // withdrawInput.value ='';
 })
