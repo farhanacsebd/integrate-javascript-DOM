@@ -9,13 +9,18 @@ function getInputField(inputValue){
     elementInput.value = '';
 
     return newElementAmount;
-}
+};
 
 
 function getTheAmount(totalAmount,newAmount){
     const elementTotal = document.getElementById(totalAmount);
     const previousAmount = parseFloat(elementTotal.innerText);
     elementTotal.innerText = previousAmount + newAmount;
+};
+
+
+function getCurrentBalance(){
+    
 }
 
 
@@ -29,7 +34,7 @@ function getThaBalance(balanceAmount,newAmount,isAdd){
     else{
         balanceTotal.innerText = balanceTotalAmount - newAmount;
     }
-}
+};
 
 
 document.getElementById('deposite-button').addEventListener('click',function(){
@@ -70,7 +75,7 @@ balanceTotal.innerText = balanceTotalAmount + newDipositeAmount; */
 document.getElementById('withdraw-button').addEventListener('click',function(){
   
     const newWithdrawAmount = getInputField('withdraw-input');
-    if (newWithdrawAmount > 0){
+    if(newWithdrawAmount > 0){
         getTheAmount('withdraw-total',newWithdrawAmount);
     getThaBalance('balance-total',newWithdrawAmount,false);
     }
