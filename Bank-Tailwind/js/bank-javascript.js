@@ -18,11 +18,17 @@ function getTheAmount(totalAmount,newAmount){
     elementTotal.innerText = previousAmount + newAmount;
 };
 
+function getCurrentBalance(){
+    const balanceTotal = document.getElementById('balance-total');
+    const balanceTotalAmount = parseFloat(balanceTotal.innerText);
+    return balanceTotalAmount;
+}
 
 
 function getThaBalance(newAmount,isAdd){
     const balanceTotal = document.getElementById('balance-total');
-    const balanceTotalAmount = parseFloat(balanceTotal.innerText);
+    // const balanceTotalAmount = parseFloat(balanceTotal.innerText);
+    const balanceTotalAmount = getCurrentBalance();
     
     if(isAdd == true){
         balanceTotal.innerText = balanceTotalAmount + newAmount;
@@ -71,7 +77,8 @@ balanceTotal.innerText = balanceTotalAmount + newDipositeAmount; */
 document.getElementById('withdraw-button').addEventListener('click',function(){
   
     const newWithdrawAmount = getInputField('withdraw-input');
-    if(newWithdrawAmount > 0){
+    const currentBalance = getCurrentBalance();
+    if(newWithdrawAmount > 0 && newWithdrawAmount < currentBalance){
         getTheAmount('withdraw-total',newWithdrawAmount);
     getThaBalance(newWithdrawAmount,false);
     }
