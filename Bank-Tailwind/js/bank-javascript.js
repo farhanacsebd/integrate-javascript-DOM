@@ -3,11 +3,20 @@
 function getInputField(inputValue){
     const dipositeInput = document.getElementById(inputValue);
     const newDipositeAmount = parseFloat(dipositeInput.value);
+    
+    // clear value
+
+    dipositeInput.value = '';
+
     return newDipositeAmount;
 }
 
 
-
+function getTheAmount(totalAmount,newDipositeAmount){
+    const dipositeTotal = document.getElementById(totalAmount);
+    const previousDitositeAmount = parseFloat(dipositeTotal.innerText);
+    dipositeTotal.innerText = previousDitositeAmount + newDipositeAmount;
+}
 
 
 
@@ -23,10 +32,10 @@ document.getElementById('deposite-button').addEventListener('click',function(){
 
 // diposite value show
 
-const dipositeTotal = document.getElementById('deposite-total');
+/* const dipositeTotal = document.getElementById('deposite-total');
 const previousDitositeAmount = parseFloat(dipositeTotal.innerText);
-dipositeTotal.innerText = previousDitositeAmount + newDipositeAmount;
-
+dipositeTotal.innerText = previousDitositeAmount + newDipositeAmount; */
+getTheAmount('deposite-total',newDipositeAmount);
 
 
 // Balance Increasing
@@ -37,11 +46,6 @@ balanceTotal.innerText = balanceTotalAmount + newDipositeAmount;
 
 
 
-// clear value
-
-dipositeInput.value = '';
-
-
 });
 
 
@@ -49,9 +53,11 @@ dipositeInput.value = '';
 
 document.getElementById('withdraw-button').addEventListener('click',function(){
     
-    const withdrawInput = document.getElementById('withdraw-input');
-    const newWithdrawAmount = parseFloat(withdrawInput.value);
-    
+    /* const withdrawInput = document.getElementById('withdraw-input');
+    const newWithdrawAmount = parseFloat(withdrawInput.value); */
+    const newWithdrawAmount = getInputField('withdraw-input');
+
+
     const withdrawTotal = document.getElementById('withdraw-total');
     const previousWithdrawAmount = parseFloat(withdrawTotal.innerText);
     withdrawTotal.innerText = previousWithdrawAmount + newWithdrawAmount;
