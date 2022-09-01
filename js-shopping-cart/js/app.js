@@ -4,5 +4,5 @@ document.getElementById('iphone-plus-button').addEventListener('click',function(
     console.log(firstInput.value);
 
     const iphonAmount = document.getElementById('iphon-amount');
-    // iphonAmount.innerText = firstInput.value;
+    console.log(iphonAmount.innerText);
 })
