@@ -1,8 +1,14 @@
-/* document.getElementById('iphone-plus-button').addEventListener('click',function(){
+document.getElementById('phone-plus').addEventListener('click',function(){
     
-    const firstInput = document.getElementById('first-input');
-    console.log(firstInput.value);
+    const phoneInput = document.getElementById('phone-number');
+    const phoneNumber = parseInt(phoneInput.value) +1;
+    phoneInput.value =phoneNumber;
 
-    const iphonAmount = document.getElementById('iphon-amount');
-    console.log(iphonAmount.innerText);
-}) */
+});     
+document.getElementById('phone-minus').addEventListener('click',function(){
+    
+    const phoneInput = document.getElementById('phone-number');
+    const phoneNumber = parseInt(phoneInput.value) -1;
+    phoneInput.value =phoneNumber;
+
+});     
