@@ -20,12 +20,12 @@ function getInputValue(product){
     return productNumber;
 }
 
-function calcutateTotal(){
+/* function calcutateTotal(){
     const phoneTotal = getInputValue('phone') * 1219;
     const caseTotal = getInputValue('sub-total') * 59;
     const subTotal =document.getElementById('sub-total');
     subTotal.innerText = phoneTotal + caseTotal;
-}
+} */
 
 
 
