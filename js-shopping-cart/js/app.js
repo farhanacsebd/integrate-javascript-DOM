@@ -9,9 +9,10 @@ function updateproductnumber(product,price,increaseNumber){
     }
     productInput.value =productNumber;
 
-    const totalNumber = document.getElementById(product+'-total');
+    const totalNumber = document.getElementById(product +'-total');
     totalNumber.innerText = productNumber * price;
   
+    calcutateTotal()
 }
 function getInputValue(product){
     const productInput = document.getElementById(product,'-number');
@@ -20,9 +21,10 @@ function getInputValue(product){
 }
 
 function calcutateTotal(){
-    const phoneTotal = getInputValue("phone") * 1219;
-    const caseTotal = getInputValue("case") * 59;
-
+    const phoneTotal = getInputValue('phone') * 1219;
+    const caseTotal = getInputValue('sub-total') * 59;
+    const subTotal =document.getElementById('sub-total');
+    subTotal.innerText = phoneTotal + caseTotal;
 }
 
 
