@@ -8,6 +8,11 @@ function updateproductnumber(increaseNumber){
       phoneNumber = parseInt(phoneInput.value) -1;
     }
     phoneInput.value =phoneNumber;
+
+    const totalNumber = document.getElementById('phone-total');
+    totalNumber.innerText = phoneNumber * 1219;
+    
+    
 }
 
 
