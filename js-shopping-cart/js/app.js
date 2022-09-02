@@ -1,16 +1,20 @@
+function calcutateTotal(){
+    
+}
+
 function updateproductnumber(product,price,increaseNumber){
-    const phoneInput = document.getElementById(product+'-number');
-    let phoneNumber =phoneInput.value;
+    const productInput = document.getElementById(product+'-number');
+    let productNumber =productInput.value;
     if(increaseNumber){
-        phoneNumber = parseInt(phoneInput.value) +1;
+        productNumber = parseInt(productInput.value) +1;
     }
-    else if(phoneNumber>0){
-      phoneNumber = parseInt(phoneInput.value) -1;
+    else if(productNumber>0){
+      productNumber = parseInt(productInput.value) -1;
     }
-    phoneInput.value =phoneNumber;
+    productInput.value =productNumber;
 
     const totalNumber = document.getElementById(product+'-total');
-    totalNumber.innerText = phoneNumber * price;
+    totalNumber.innerText = productNumber * price;
     
     
 }
