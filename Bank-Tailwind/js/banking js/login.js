@@ -1,1 +1,3 @@
-console.log('connect to login pages');
+document.getElementById('login-submit').addEventListener('click',function(){
+    console.log('submit');
+})
