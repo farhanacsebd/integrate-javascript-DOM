@@ -14,19 +14,19 @@ function updateproductnumber(product,price,increaseNumber){
   
     calcutateTotal()
 }
+
 function getInputValue(product){
-    const productInput = document.getElementById(product,'-number');
+    const productInput = document.getElementById(product +'-number');
     const productNumber = parseInt(productInput.value);
     return productNumber;
 }
 
-/* function calcutateTotal(){
+function calcutateTotal(){
     const phoneTotal = getInputValue('phone') * 1219;
-    const caseTotal = getInputValue('sub-total') * 59;
-    const subTotal =document.getElementById('sub-total');
-    subTotal.innerText = phoneTotal + caseTotal;
-} */
-
+    const caseTotal = getInputValue('case') * 59;
+    const subTotal = phoneTotal + caseTotal;;
+    document.getElementById('sub-total').innerText=subTotal; 
+}
 
 
 document.getElementById('phone-plus').addEventListener('click',function(){
