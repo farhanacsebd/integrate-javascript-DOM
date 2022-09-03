@@ -25,7 +25,11 @@ function calcutateTotal(){
     const phoneTotal = getInputValue('phone') * 1219;
     const caseTotal = getInputValue('case') * 59;
     const subTotal = phoneTotal + caseTotal;;
+    const tax = subTotal /10 ;
+    
     document.getElementById('sub-total').innerText=subTotal; 
+    document.getElementById('tax-amount').innerText=tax; 
+    ; 
 }
 
 
