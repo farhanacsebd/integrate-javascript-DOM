@@ -15,4 +15,11 @@ document.getElementById('deposite-button').addEventListener('click',function(){
     // clear input field 
 
     dipositeInput.value = ''; 
+
+    // updated balance
+    const balanceField = document.getElementById('balance-total');
+    const balanceText = balanceField.innerText;
+    const balanceAmount = parseFloat(balanceText);
+    const dipositeBalanceIs = balanceAmount + dipositeNewAmount;
+    balanceField.innerText = dipositeBalanceIs;
 })
