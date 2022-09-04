@@ -1,51 +1,59 @@
-document.getElementById('deposite-button').addEventListener('click',function(){
-    const dipositeInput = document.getElementById('deposite-input');
+function updateInputField(product){
+    const dipositeInput = document.getElementById(product);
     const dipositeText = dipositeInput.value;
     const dipositeNewAmount = parseFloat(dipositeText);
-    dipositeInput.value = dipositeNewAmount;
-
-
-    const dipositeField = document.getElementById('deposite-total');
-    const previousDiposite = dipositeField.innerText;
-    const previousDipositeAmount = parseFloat(previousDiposite);
-    const totalDipositeAmount = dipositeNewAmount + previousDipositeAmount;
-    dipositeField.innerText = totalDipositeAmount;
-
-
     // clear input field 
 
     dipositeInput.value = ''; 
+    
+    return dipositeNewAmount;
+}
 
-    // updated balance
+function getUpdateField(fieldTotal,newAmount){
+    const dipositeField = document.getElementById(fieldTotal);
+    const previousDiposite = dipositeField.innerText;
+    const previousDipositeAmount = parseFloat(previousDiposite);
+    const totalDipositeAmount = newAmount + previousDipositeAmount;
+    dipositeField.innerText = totalDipositeAmount;
+}
+function updateBalanceTotal(isOdd,newAmount){
+  // updated balance
+    const balanceField = document.getElementById('balance-total');
+    const balanceText = balanceField.innerText;
+    const balanceAmount = parseFloat(balanceText);
+    if(isOdd){
+        balanceField.innerText = balanceAmount + newAmount;
+    }
+    else{
+        balanceField.innerText = balanceAmount - newAmount;
+    }
+    
+}
+
+
+
+
+document.getElementById('deposite-button').addEventListener('click',function(){
+   const dipositeNewAmount = updateInputField('deposite-input')
+
+   getUpdateField('deposite-total',dipositeNewAmount)
+   updateBalanceTotal(true,dipositeNewAmount)
+   /*  // updated balance
     const balanceField = document.getElementById('balance-total');
     const balanceText = balanceField.innerText;
     const balanceAmount = parseFloat(balanceText);
     const dipositeBalanceIs = balanceAmount + dipositeNewAmount;
-    balanceField.innerText = dipositeBalanceIs;
+    balanceField.innerText = dipositeBalanceIs; */
 });
 
 document.getElementById('withdraw-button').addEventListener('click',function(){
-    
-    const withdrawInput = document.getElementById('withdraw-input');
-    const withdrawText = withdrawInput.value;
-    const withdrawNewAmount = parseFloat(withdrawText);
-    withdrawInput.value = withdrawNewAmount;
 
-    const withdrawField = document.getElementById('withdraw-total');
-    const previousWithdraw = withdrawField.innerText;
-    const previousWithdrawAmount = parseFloat(previousWithdraw);
-    const totalWithdrawAmount = previousWithdrawAmount + withdrawNewAmount;
-    withdrawField.innerText = totalWithdrawAmount;
-    // clear filed 
-    withdrawInput.value ='';
+    const withdrawNewAmount = updateInputField('withdraw-input');
+
+    getUpdateField('withdraw-total',withdrawNewAmount)
 
 
-     // updated withdraw balance
-     const balanceField = document.getElementById('balance-total');
-     const balanceText = balanceField.innerText;
-     const balanceAmount = parseFloat(balanceText);
-     const withdrawBalanceIs = balanceAmount - withdrawNewAmount;
-     balanceField.innerText = withdrawBalanceIs;
+    updateBalanceTotal(false,withdrawNewAmount)
 })
 
 
