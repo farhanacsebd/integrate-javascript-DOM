@@ -22,4 +22,10 @@ document.getElementById('deposite-button').addEventListener('click',function(){
     const balanceAmount = parseFloat(balanceText);
     const dipositeBalanceIs = balanceAmount + dipositeNewAmount;
     balanceField.innerText = dipositeBalanceIs;
+});
+
+document.getElementById('withdraw-button').addEventListener('click',function(){
+    console.log('sdfsdf');
 })
+
+
