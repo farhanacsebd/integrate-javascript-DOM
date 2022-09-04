@@ -61,4 +61,126 @@ document.getElementById('login-submit').addEventListener('click',function(){
 
 })
 ```
+`bank`
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+    <header>
+        <h1 class="text-5xl text-center mt-8">Let's get some <span class="font-semibold text-indigo-700">Money!!!</span></h1> 
+    </header>
+    <main class="w-3/4 mx-auto">
+        <!-- balance and transection -->
+        <section class="mt-12 mb-8">
+            <div class="grid grid-cols-3 gap-4 text-white">
+                <div class="bg-blue-300 p-8 rounded">
+                    <h3 class="text-2xl">Deposite</h3>
+                    <h2 class="text-4xl">$<span id="deposite-total">00</span></h2>
+                </div>
+                <div class="bg-yellow-300 p-8 rounded">
+                    <h3 class="text-2xl">Withdraw</h3>
+                    <h2 class="text-4xl">$<span id="withdraw-total">00</span></h2>
+                </div>
+                <div class="bg-rose-300 p-8 rounded">
+                    <h3 class="text-2xl">Balance</h3>
+                    <h2 class="text-4xl">$<span id="balance-total">1240</span></h2>
+                </div>
+            </div>
+        </section>
+        <!-- deposite and withdraw -->
+        <section>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-teal-200 p-8 rounded">
+                    <h3 class="font-medium text-2xl mb-4">Please Deposite</h3>
+                    <input id="deposite-input" class="block border border-gray-400 rounded w-3/4 mb-4 px-2 py-1" type="text" placeholder="$ amount you want to deposite">
+                    <button id="deposite-button" class="bg-rose-600 px-4 py-2 font-medium text-slate-50 rounded">Deposite</button>
+                </div>
+                <div class="bg-fuchsia-200 p-8 rounded">
+                    <h3 class="font-medium text-2xl mb-4">Please Withdraw</h3>
+                    <input id="withdraw-input" class="block border border-gray-400 rounded w-3/4 mb-4 px-2 py-1" type="text" placeholder="$ amount you want to deposite">
+                    <button id="withdraw-button" class="bg-rose-600 px-4 py-2 font-medium text-slate-50 rounded">Withdraw</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- <script src="js/banking.js"></script> -->
+    <!-- <script src="js/bank-javascript.js"></script> -->
+    <script src="js/banking js/newcode.js"></script>
+</body>
+</html>
+```
+`bank js`
+```javascript
+function updateInputField(product){
+    const dipositeInput = document.getElementById(product);
+    const dipositeText = dipositeInput.value;
+    const dipositeNewAmount = parseFloat(dipositeText);
+    // clear input field 
 
+    dipositeInput.value = ''; 
+    
+    return dipositeNewAmount;
+}
+
+function getUpdateField(fieldTotal,newAmount){
+    const dipositeField = document.getElementById(fieldTotal);
+    const previousDiposite = dipositeField.innerText;
+    const previousDipositeAmount = parseFloat(previousDiposite);
+    const totalDipositeAmount = newAmount + previousDipositeAmount;
+    dipositeField.innerText = totalDipositeAmount;
+}
+
+function updateBalance(){
+    const balanceField = document.getElementById('balance-total');
+    const balanceAmount = parseFloat(balanceField.innerText);
+    return balanceAmount;
+}
+function updateBalanceTotal(isOdd,newAmount){
+  // updated balance
+    const balanceField = document.getElementById('balance-total');
+    const balanceAmount = parseFloat(balanceField.innerText);
+    if(isOdd){
+        balanceField.innerText = balanceAmount + newAmount;
+    }
+    else{
+        balanceField.innerText = balanceAmount - newAmount;
+    }
+    
+}
+
+
+
+
+document.getElementById('deposite-button').addEventListener('click',function(){
+   const dipositeNewAmount = updateInputField('deposite-input')
+
+  if(dipositeNewAmount>0){
+    getUpdateField('deposite-total',dipositeNewAmount)
+
+    updateBalanceTotal(true,dipositeNewAmount)
+  }
+
+});
+
+document.getElementById('withdraw-button').addEventListener('click',function(){
+
+    const withdrawNewAmount = updateInputField('withdraw-input');
+    const balanceAmount = updateBalance();
+
+   if(withdrawNewAmount>0 && withdrawNewAmount < balanceAmount){
+    getUpdateField('withdraw-total',withdrawNewAmount)
+
+
+    updateBalanceTotal(false,withdrawNewAmount)
+   }
+})
+
+```
