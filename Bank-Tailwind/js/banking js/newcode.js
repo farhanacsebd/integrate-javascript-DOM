@@ -36,24 +36,24 @@ function updateBalanceTotal(isOdd,newAmount){
 document.getElementById('deposite-button').addEventListener('click',function(){
    const dipositeNewAmount = updateInputField('deposite-input')
 
-   getUpdateField('deposite-total',dipositeNewAmount)
-   updateBalanceTotal(true,dipositeNewAmount)
-   /*  // updated balance
-    const balanceField = document.getElementById('balance-total');
-    const balanceText = balanceField.innerText;
-    const balanceAmount = parseFloat(balanceText);
-    const dipositeBalanceIs = balanceAmount + dipositeNewAmount;
-    balanceField.innerText = dipositeBalanceIs; */
+  if(dipositeNewAmount>0){
+    getUpdateField('deposite-total',dipositeNewAmount)
+
+    updateBalanceTotal(true,dipositeNewAmount)
+  }
+
 });
 
 document.getElementById('withdraw-button').addEventListener('click',function(){
 
     const withdrawNewAmount = updateInputField('withdraw-input');
 
+   if(withdrawNewAmount>0){
     getUpdateField('withdraw-total',withdrawNewAmount)
 
 
     updateBalanceTotal(false,withdrawNewAmount)
+   }
 })
 
 
