@@ -16,11 +16,16 @@ function getUpdateField(fieldTotal,newAmount){
     const totalDipositeAmount = newAmount + previousDipositeAmount;
     dipositeField.innerText = totalDipositeAmount;
 }
+
+function updateBalance(){
+    const balanceField = document.getElementById('balance-total');
+    const balanceAmount = parseFloat(balanceField.innerText);
+    return balanceAmount;
+}
 function updateBalanceTotal(isOdd,newAmount){
   // updated balance
     const balanceField = document.getElementById('balance-total');
-    const balanceText = balanceField.innerText;
-    const balanceAmount = parseFloat(balanceText);
+    const balanceAmount = parseFloat(balanceField.innerText);
     if(isOdd){
         balanceField.innerText = balanceAmount + newAmount;
     }
@@ -47,8 +52,9 @@ document.getElementById('deposite-button').addEventListener('click',function(){
 document.getElementById('withdraw-button').addEventListener('click',function(){
 
     const withdrawNewAmount = updateInputField('withdraw-input');
+    const balanceAmount = updateBalance();
 
-   if(withdrawNewAmount>0){
+   if(withdrawNewAmount>0 && withdrawNewAmount < balanceAmount){
     getUpdateField('withdraw-total',withdrawNewAmount)
 
 
