@@ -1,8 +1,37 @@
 # integrate-javascript-DOM
 
 #### Those function donot have perametter that is call Anonynous function.
-
-`banking login`
+`banking login html`
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baap er Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+   <header>
+    <h1 class="text-5xl text-center mt-16">Welcome to <span class="font-semibold text-indigo-700">Baap er Bank!!!</span></h1> 
+   </header>
+    <section class="bg-sky-100 w-3/4 mx-auto mt-8 p-10">
+        <main>
+            <h3 class="font-medium text-2xl mb-4">Please Login</h3>
+            <div>
+                <input id="user-email" class="block border border-gray-400 rounded w-3/4 mb-4 px-2 py-1" type="text" placeholder="your email">
+                <input id="user-password" class="block border border-gray-400 rounded w-3/4 mb-4 px-2 py-1" type="password" placeholder="password">
+                <button id="login-submit" class="bg-amber-500 px-4 py-2 font-medium text-slate-50 rounded">Submit</button>
+            </div>
+        </main>
+    </section>
+    <!-- <script src="js/bank.js"></script> -->
+    <script src="js/banking js/login.js"></script>
+</body>
+</html>  
+```
+`banking login js`
 ```javascript
 document.getElementById('login-submit').addEventListener('click',function(){
      // get user email
