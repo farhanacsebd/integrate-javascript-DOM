@@ -5,13 +5,13 @@ function getPin(){
         return pin;
     }
     else{
-        console.log('got 3 digit and calling again',pin);
+        // console.log('got 3 digit and calling again',pin);
         return getPin();
     }
 }
 
 
 function generatePin(){
-    
-    console.log(pin);
+    const pin = getPin();
+    document.getElementById('display-pin').value=pin;
 }
