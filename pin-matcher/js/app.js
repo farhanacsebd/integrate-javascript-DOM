@@ -5,6 +5,7 @@ function getPin(){
         return pin;
     }
     else{
+        console.log('got 3 digit and calling again',pin);
         return getPin();
     }
 }
