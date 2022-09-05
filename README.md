@@ -117,6 +117,7 @@ document.getElementById('login-submit').addEventListener('click',function(){
 </body>
 </html>
 ```
+### Function:
 `bank js`
 ```javascript
 function updateInputField(product){
