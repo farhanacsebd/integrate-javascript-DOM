@@ -18,6 +18,8 @@ function generatePin(){
 
 document.getElementById('key-pad').addEventListener('click',function(event){
    const number = event.target.innerText;
-   const Displayinput = document.getElementById('type-numbers');
-   Displayinput.value = number;
+   const displayinput = document.getElementById('type-numbers');
+   const previousNumber = displayinput.value;
+   const newNumber =  previousNumber + number;
+   displayinput.value = newNumber;
 })
