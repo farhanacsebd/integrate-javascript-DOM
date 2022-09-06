@@ -28,3 +28,7 @@ document.getElementById('key-pad').addEventListener('click',function(event){
     displayinput.value = newNumber;
   }
 })
+
+function verifyPin(){
+    
+}
