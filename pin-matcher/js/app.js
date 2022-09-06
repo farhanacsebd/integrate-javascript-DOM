@@ -33,9 +33,11 @@ function verifyPin(){
     const pin = document.getElementById('display-pin').value;
     const displayInput = document.getElementById('type-numbers').value;
     if(pin==displayInput){
-        const notifyFail = document.getElementById('notify-Fail').innerText;
+        const notifySuccess = document.getElementById('notify-success');
+        notifySuccess.style.display = 'block';
     }
     else{
-        console.log('fail');
+        const notifyFail = document.getElementById('notify-Fail');
+        notifyFail.style.display = 'block'
     }
 }
