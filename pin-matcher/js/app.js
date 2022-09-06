@@ -30,5 +30,12 @@ document.getElementById('key-pad').addEventListener('click',function(event){
 })
 
 function verifyPin(){
-    
+    const pin = document.getElementById('display-pin').value;
+    const displayInput = document.getElementById('type-numbers').value;
+    if(pin==displayInput){
+        console.log('success');
+    }
+    else{
+        console.log('fail');
+    }
 }
