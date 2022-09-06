@@ -33,7 +33,7 @@ function verifyPin(){
     const pin = document.getElementById('display-pin').value;
     const displayInput = document.getElementById('type-numbers').value;
     if(pin==displayInput){
-        console.log('success');
+        const notifyFail = document.getElementById('notify-Fail').innerText;
     }
     else{
         console.log('fail');
