@@ -102,7 +102,7 @@ document.getElementById('withdraw-button').addEventListener('click',function(){
       updatedTotalField('withdraw-total',newWithdrawAmount);
       updateBalance(newWithdrawAmount,false);
     }
-    if(newWithdrawAmount>currentBalance){
+    else if(newWithdrawAmount>currentBalance){
         alert("You can't do this!")
     }
    
