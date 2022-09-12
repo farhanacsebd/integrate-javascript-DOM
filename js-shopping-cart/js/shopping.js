@@ -4,7 +4,7 @@ function getThePhoneIncrease(increase){
     if(increase){
         caseNumber = parseInt(caseInput.value)+1;
     }
-    else{
+    else if(caseNumber>0){
         caseNumber = parseInt(caseInput.value)-1;  
     }
     caseInput.value =caseNumber;
