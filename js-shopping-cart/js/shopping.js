@@ -1,16 +1,26 @@
-function getThePhoneIncrease(){
-    
+function getThePhoneIncrease(increase){
+    const caseInput = document.getElementById('case-number');
+    let caseNumber = caseInput.value;
+    if(increase){
+        caseNumber = parseInt(caseInput.value)+1;
+    }
+    else{
+        caseNumber = parseInt(caseInput.value)-1;  
+    }
+    caseInput.value =caseNumber;
 }
 
 
 
 document.getElementById('case-plus').addEventListener('click',function(){
-    const caseInput = document.getElementById('case-number');
-    const caseNumber = parseInt(caseInput.value)+1;
-    caseInput.value =caseNumber;
+    // const caseInput = document.getElementById('case-number');
+    // const caseNumber = parseInt(caseInput.value)+1;
+    // caseInput.value =caseNumber;
+    getThePhoneIncrease(true) 
 })
 document.getElementById('case-minus').addEventListener('click',function(){
-    const caseInput = document.getElementById('case-number');
+    /* const caseInput = document.getElementById('case-number');
     const caseNumber = parseInt(caseInput.value)-1;
-    caseInput.value =caseNumber;
+    caseInput.value =caseNumber; */
+    getThePhoneIncrease(false) 
 })
