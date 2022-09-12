@@ -28,3 +28,15 @@ document.getElementById('case-minus').addEventListener('click',function(){
     caseInput.value =caseNumber; */
     getThePhoneIncrease(59,false) 
 })
+document.getElementById('case-plus').addEventListener('click',function(){
+    // const caseInput = document.getElementById('case-number');
+    // const caseNumber = parseInt(caseInput.value)+1;
+    // caseInput.value =caseNumber;
+    getThePhoneIncrease(59,true) 
+})
+document.getElementById('case-minus').addEventListener('click',function(){
+    /* const caseInput = document.getElementById('case-number');
+    const caseNumber = parseInt(caseInput.value)-1;
+    caseInput.value =caseNumber; */
+    getThePhoneIncrease(59,false) 
+})
