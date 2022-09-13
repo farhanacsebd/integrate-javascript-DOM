@@ -8,10 +8,10 @@ function getThePhoneIncrease(product,price,increase){
         productNumber = parseInt(productInput.value)-1;  
     }
     productInput.value =productNumber;
-    const caseTotal = document.getElementById(product + '-total');
+    const productTotal = document.getElementById(product + '-total');
     // const caseTotalPrice = parseInt(caseTotal.innerText);
     const casePrice = productNumber * price;
-    caseTotal.innerText = casePrice;
+    productTotal.innerText = casePrice;
 }
 
 
