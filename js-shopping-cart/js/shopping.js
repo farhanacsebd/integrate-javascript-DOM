@@ -1,18 +1,23 @@
 function getThePhoneIncrease(product,price,increase){
-    const caseInput = document.getElementById(product +'-number');
-    let caseNumber = caseInput.value;
+    const productInput = document.getElementById(product +'-number');
+    let productNumber = productInput.value;
     if(increase){
-        caseNumber = parseInt(caseInput.value)+1;
+        productNumber = parseInt(productInput.value)+1;
     }
-    else if(caseNumber>0){
-        caseNumber = parseInt(caseInput.value)-1;  
+    else if(productNumber>0){
+        productNumber = parseInt(productInput.value)-1;  
     }
-    caseInput.value =caseNumber;
+    productInput.value =productNumber;
     const caseTotal = document.getElementById(product + '-total');
     // const caseTotalPrice = parseInt(caseTotal.innerText);
-    const casePrice = caseNumber * price;
+    const casePrice = productNumber * price;
     caseTotal.innerText = casePrice;
 }
+
+
+function getCalculation(){
+
+} 
 
 
 
