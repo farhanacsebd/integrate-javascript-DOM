@@ -1,7 +1,7 @@
 # integrate-javascript-DOM
 
 #### Those function donot have perametter that is call Anonynous function.
-`banking login html`
+#### banking login html
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +31,7 @@
 </body>
 </html>  
 ```
-`banking login js`
+#### banking login js
 ```javascript
 document.getElementById('login-submit').addEventListener('click',function(){
      // get user email
@@ -61,7 +61,7 @@ document.getElementById('login-submit').addEventListener('click',function(){
 
 })
 ```
-`bank`
+#### bank html
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -118,7 +118,7 @@ document.getElementById('login-submit').addEventListener('click',function(){
 </html>
 ```
 ### Function:
-`bank js`
+- bank js
 ```javascript
 function updateInputField(product){
     const dipositeInput = document.getElementById(product);
@@ -156,9 +156,6 @@ function updateBalanceTotal(isOdd,newAmount){
     }
     
 }
-
-
-
 
 document.getElementById('deposite-button').addEventListener('click',function(){
    const dipositeNewAmount = updateInputField('deposite-input')
