@@ -118,7 +118,7 @@ document.getElementById('login-submit').addEventListener('click',function(){
 </html>
 ```
 ### Function:
-- bank js
+#### bank js
 ```javascript
 function updateInputField(product){
     const dipositeInput = document.getElementById(product);
