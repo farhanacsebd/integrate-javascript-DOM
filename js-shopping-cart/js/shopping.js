@@ -10,15 +10,28 @@ function getThePhoneIncrease(product,price,increase){
     productInput.value =productNumber;
     const productTotal = document.getElementById(product + '-total');
     // const caseTotalPrice = parseInt(caseTotal.innerText);
-    const casePrice = productNumber * price;
-    productTotal.innerText = casePrice;
+    const productPrice = productNumber * price;
+    productTotal.innerText = productPrice;
+    getInputValue()
 }
 
 
-function getCalculation(){
-
+function getCalculationTotal(product){
+    const productInput = document.getElementById(product + '-number');
+    const productNumber = parseInt(productInput.value);
+    return productNumber;
 } 
 
+function getInputValue(){
+    const caseTotal = getCalculationTotal('case')*59;
+    const phoneTotal = getCalculationTotal('phone')*1219;
+    const subTotal = caseTotal + phoneTotal;
+    const tax = subTotal / 10;
+    const total = subTotal + tax;
+    document.getElementById('sub-total').innerText = subTotal;
+    document.getElementById('tax-amount').innerText = tax;
+    document.getElementById('total-amount').innerText = total;
+}
 
 
 document.getElementById('case-plus').addEventListener('click',function(){
