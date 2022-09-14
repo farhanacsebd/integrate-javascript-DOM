@@ -17,8 +17,14 @@ function generatePin(){
 
 
 document.getElementById('key-pad').addEventListener('click',function(event){
-    const keyPad = event.target.innerText;
-    const typeNumber = document.getElementById('type-numbers');const previoustype = typeNumber.value;
-    const newType = previoustype + keyPad;
-    typeNumber.value = newType;
+    const number = event.target.innerText;
+    const typeNumber = document.getElementById('type-numbers');
+    if(isNaN(number)){
+        typeNumber.value = '';
+    }
+    else{
+        const previoustype = typeNumber.value;
+        const newType = previoustype + number;
+        typeNumber.value = newType;
+    }
 })
