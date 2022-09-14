@@ -182,7 +182,8 @@ document.getElementById('withdraw-button').addEventListener('click',function(){
 })
 
 ```
-### shopping cart
+### shopping cart:
+ ![](images/iPhone.PNG)
 #### only js code added
 ```javascript
 function getThePhoneIncrease(product,price,increase){
