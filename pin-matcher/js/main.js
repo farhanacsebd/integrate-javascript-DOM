@@ -28,7 +28,8 @@ document.getElementById('key-pad').addEventListener('click',function(event){
 })
 
 function verifyPin(){
-    console.log('hello');
+    const pin = document.getElementById('display-pin');
+    const displayPin = document.getElementById('type-numbers');
 }
 
 /* function getPin(){
