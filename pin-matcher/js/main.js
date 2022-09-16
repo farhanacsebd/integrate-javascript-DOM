@@ -13,7 +13,9 @@ function generatePin(){
     const pin = getPin();
     const displayPinInput = document.getElementById('display-pin').value = pin;
 }
-
+document.getElementById('key-pad').addEventListener('click',function(event){
+    console.log(event.target.innerText);
+})
 
 /* function getPin(){
     const pin = Math.round(Math.random()*10000)
