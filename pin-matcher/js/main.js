@@ -5,13 +5,13 @@ function getPin(){
         return pin;
     }
     else{
-        return generatePin()
+        return getPin()
     }
 }
 
 function generatePin(){
-    const pin = getPin()
-    console.log(pin);
+    const pin = getPin();
+    const displayPinInput = document.getElementById('display-pin').value = pin;
 }
 
 
