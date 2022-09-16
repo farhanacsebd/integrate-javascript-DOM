@@ -33,13 +33,14 @@ document.getElementById('key-pad').addEventListener('click',function(event){
 function verifyPin(){
     const pin = document.getElementById('display-pin').value;
     const displayInput = document.getElementById('type-numbers').value;
-    const notifySuccess = document.getElementById('notify-success').innerText;
+    const notifySuccess = document.getElementById('notify-success');
+    const notifyFail = document.getElementById('notify-Fail');
     if(pin==displayInput){
         notifySuccess.style.display = 'block';
         notifyFail.style.display = 'none';
     }
     else{
-        const notifyFail = document.getElementById('notify-Fail');
+       
         notifyFail.style.display = 'block';
         notifySuccess.style.display = 'none';
     }
