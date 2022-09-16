@@ -1,4 +1,10 @@
-function getPin(){
+function generatePin(){
+    const pin = Math.round(Math.random() * 10000);
+    console.log(pin);
+}
+
+
+/* function getPin(){
     const pin = Math.round(Math.random()*10000)
     const pinString = pin + '';
     if(pinString.length == 4){
@@ -43,4 +49,4 @@ function verifyPin(){
         notifyFail.style.display = 'block';
         notifySuccess.style.display = 'none';
     }
-}
+} */
