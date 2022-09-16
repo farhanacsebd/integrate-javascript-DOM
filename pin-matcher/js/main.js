@@ -16,9 +16,14 @@ function generatePin(){
 document.getElementById('key-pad').addEventListener('click',function(event){
     const number = event.target.innerText;
     const displayInput = document.getElementById('type-numbers');
-    const previoustypeText = displayInput.value;
-    const newNumber = previoustypeText + number;
-    displayInput.value =  newNumber;
+    if(isNaN(number)){
+        displayInput.value = '';
+    }
+    else{
+        const previoustypeText = displayInput.value;
+        const newNumber = previoustypeText + number;
+        displayInput.value =  newNumber;
+    }
 
 })
 
