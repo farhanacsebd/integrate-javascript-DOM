@@ -11,10 +11,15 @@ function getPin(){
 
 function generatePin(){
     const pin = getPin();
-    const displayPinInput = document.getElementById('display-pin').value = pin;
+    document.getElementById('display-pin').value = pin;
 }
 document.getElementById('key-pad').addEventListener('click',function(event){
-    console.log(event.target.innerText);
+    const number = event.target.innerText;
+    const displayInput = document.getElementById('type-numbers');
+    const previoustypeText = displayInput.value;
+    const newNumber = previoustypeText + number;
+    displayInput.value =  newNumber;
+
 })
 
 /* function getPin(){
