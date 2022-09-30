@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+  <section class="mb-5">
+    <h1 class="text-center my-5 fw-bold title-hover">MAC-BOOK-Pro</h1>
+    <div class="container">
+        <div class="row">
+            <!-- 6 column for image -->
+            <div class="col-md-6">
+                <img class="img-fluid pe-5" src="images/mac.png" alt="">
+            </div>
+            <!-- 6 column for features -->
+            <div class="col-md-6">
+                <h3 class="title-hover">Customize your Blue 24-inch <br> iMac with Apple M1 chip.</h3>
+                <p class="title-hover">Apple M1 chip with 8-core CPU with 4 performens cores and 4 efficiency
+                    cores,7-core GPU and
+                    16-core Neural Engine 8 unified memory 256GB SSD storage Tow thundarbolt/USB 4 ports Magic
+                    Mouse Magic keyboard-US English.</p>
+
+                <div>
+                    <!-- all the buttons start in here -->
+
+                    <h5 class="pb-2 title-hover">Memory</h5>
+                    <button id="first" type="button" class="btn btn-light w-auto fw-bold dark-btn border">8GB
+                        unified
+                        memory</button>
+                    <button id="second" type="button"
+                        class="btn btn-light w-auto fw-bold dark-btn border fw-bold">16GB
+                        unified
+                        memory</button>
+
+                    <h5 class="mt-5 pb-2 title-hover fw-bold">Storage</h5>
+                    <button id="third" type="button" class="btn btn-light w-auto fw-bold dark-btn border">256GB
+                        SSD
+                        storage</button>
+                    <button id="fourth" type="button" class="btn btn-light w-auto fw-bold dark-btn border">512GB
+                        SSD
+                        storage</button>
+                    <button id="fifth" type="button" class="btn btn-light w-auto fw-bold dark-btn border">1TB
+                        SSD
+                        storage</button>
+
+                    <h5 class="mt-5 pb-2 title-hover fw-bold">Choose your delivary option</h5>
+                    <button id="sixth" type="button"
+                        class="btn btn-light w-auto fw-bold dark-btn border">Monday,Oct 4
+                        FREE
+                        Prime delivary</button>
+                    <button id="seventh" type="button"
+                        class="btn btn-light w-auto fw-bold dark-btn border">Monday,Oct 1
+                        delivary charge $<span>20</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- starting second part -->
+<section class="container mb-5">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <table class="table w-auto">
+                <tbody>
+                    <tr>
+                        <th>Best Price</th>
+                        <th> $<span id="mainCost">1299</span></th>
+                    </tr>
+                    <tr>
+                        <th>Extra Memory Cost</th>
+                        <th> $<span id="memoryCost">0</span></th>
+                    </tr>
+
+                    <tr>
+                        <th>Extra Storage Cost</th>
+                        <th> $<span id="storageCost">0</span></th>
+                    </tr>
+
+                    <tr>
+                        <th>Delivary Charge</th>
+                        <th> $<span id="delivaryCost">0</span></th>
+                    </tr>
+                </tbody>
+                <tfoot>
+
+                    <th>Total Price</th>
+                    <th>$<span id="total">1299</span></th>
+
+                </tfoot>
+            </table>
+            <h6 class="pt-4 title-hover fw-bold">Add Pomo Code</h6>
+            <input type="text" aria-label="First name" id="promoField" class="w-auto">
+
+            <!-- here is using onclick function -->
+
+            <button type="button" onclick="apply()" class="btn btn-danger fw-bold">Apply</button>
+        </div>
+    </div>
+    <!-- end the second part -->
+</section>
+<!-- start third section -->
+<section class="container">
+    <hr>
+    <h3 class="text-center fw-bold title-hover">Total $<span id="finalCost">1299</span></h3>
+</section>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+</body>
+</html>
